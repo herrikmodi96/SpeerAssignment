@@ -8,7 +8,7 @@ def is_wiki_link(url):
     pattern = r'^https://en\.wikipedia\.org/wiki/'
     return re.match(pattern, url) is not None
 
-def get_links(url, n):
+def get_links(url, n): # e.g. url https://en.wikipedia.org/wiki/Calgary
     visited = set()
     to_visit = [url]
     all_links = []
@@ -20,7 +20,7 @@ def get_links(url, n):
                 visited.add(link)
                 try:
                     page = requests.get(link)
-                    page.raise_for_status()  # Check if the request was successful
+                    page.raise_for_status()  
                     soup = BeautifulSoup(page.content, 'html.parser')
                     links = [a['href'] for a in soup.find_all('a', href=True) if a['href'].startswith('/wiki/') and ':' not in a['href']]
                     links = ['https://en.wikipedia.org' + l for l in links]
