@@ -12,9 +12,9 @@ Saves all found unique links to a JSON file.
 
 ## Requirements
 
-Python 3.x
-requests library
-beautifulsoup4 library
+- Python 3.x
+- requests library
+- beautifulsoup4 library
 
 ## Installation
 
