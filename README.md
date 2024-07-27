@@ -1,8 +1,8 @@
-#Wikipedia Link Scraper
+# Wikipedia Link Scraper
 
 This script scrapes Wikipedia links from a given Wikipedia page, following links up to a specified number of cycles, and saves the results to a JSON file.
 
-##Features
+## Features
 
 Validates the input Wikipedia link.
 Accepts an integer between 1 and 3 to determine the number of scraping cycles.
@@ -10,26 +10,26 @@ Scrapes the first 10 unique Wikipedia links from each page.
 Avoids revisiting previously visited links.
 Saves all found unique links to a JSON file.
 
-##Requirements
+## Requirements
 
 Python 3.x
 requests library
 beautifulsoup4 library
 
-##Installation
+## Installation
 
 1. Clone the repository or download the script file.
 
 2. Install the required libraries using pip:
 
-##Usage
+## Usage
 
 1. Run the Script- Python3 wiki_scraper.py
 2. Enter valid Wikipedia link (e.g. https://en.wikipedia.org/wiki/Lionel_Messi)
 3. Enter a valid integer between 1 and 3 for the number of cycles
 4. The script will scrape the Wikipedia page and save the found links to links.json.
 
-##Output
+## Output
 
 The script generates a wiki_links.json file containing all unique found links.
 
